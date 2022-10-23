@@ -32,10 +32,16 @@ dependencies:
   curved_navigation_bar: ^1.0.3
   flutter_svg: ^0.23.0+1
 
-
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  get: ^4.6.5
+  flutter_launcher_icons: ^0.10.0
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/englisherr-AppIcon.png"
 
 dev_dependencies:
   flutter_test:
@@ -53,6 +59,23 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  fonts:
+    - family: IBMPlexSerif
+      fonts:
+        - asset: fonts/IBMPlexSerif-Regular.ttf
+        - asset: fonts/IBMPlexSerif-Bold.ttf
+        - asset: fonts/IBMPlexSerif-BoldItalic.ttf
+        - asset: fonts/IBMPlexSerif-ExtraLight.ttf
+        - asset: fonts/IBMPlexSerif-ExtraLightItalic.ttf
+        - asset: fonts/IBMPlexSerif-Italic.ttf
+        - asset: fonts/IBMPlexSerif-Light.ttf
+        - asset: fonts/IBMPlexSerif-LightItalic.ttf
+        - asset: fonts/IBMPlexSerif-Medium.ttf
+        - asset: fonts/IBMPlexSerif-MediumItalic.ttf
+        - asset: fonts/IBMPlexSerif-SemiBold.ttf
+        - asset: fonts/IBMPlexSerif-SemiBoldItalic.ttf
+        - asset: fonts/IBMPlexSerif-Thin.ttf
+        - asset: fonts/IBMPlexSerif-ThinItalic.ttf
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
@@ -61,6 +84,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - assets/icon/
     - icon/award-outline.svg
     - icon/home-outline.svg
     - icon/person-outline.svg
