@@ -1,8 +1,12 @@
-import 'package:englisherr/login.dart';
+import 'package:englisherr/loadingScreen.dart';
+import 'package:englisherr/LandingScreen.dart';
+import 'package:englisherr/loginTaker.dart';
+import 'package:englisherr/splashscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class LoginInput extends StatefulWidget {
   const LoginInput({super.key});
@@ -12,6 +16,10 @@ class LoginInput extends StatefulWidget {
 }
 
 class _LoginInputState extends State<LoginInput> {
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,6 +52,7 @@ class _LoginInputState extends State<LoginInput> {
               Container(
                 width: 330,
                 child: TextField(
+                  controller: emailController,
                   obscureText: false,
                   decoration: InputDecoration(
                     
@@ -63,6 +72,7 @@ class _LoginInputState extends State<LoginInput> {
               Container(
                 width: 330,
                 child: TextField(
+                  controller: passwordController,
                   obscureText: true,
                   decoration: InputDecoration(
                     
@@ -94,10 +104,12 @@ class _LoginInputState extends State<LoginInput> {
                         side: BorderSide(width: 6, color: Color(0xff53887F))
                       ),
                       child: new InkWell(
-                      onTap: () {
-                       Get.to(() => LoginInput(),transition: Transition.rightToLeft, duration: Duration(seconds: 1));
-                       
+                      onTap: () => {
+                        signIn(),
+                        Get.to(()=> loading(),transition: Transition.fade,duration: Duration(milliseconds: 500))
                       }
+                       
+                      
                     ),
                     ),
                     Container(
@@ -141,4 +153,11 @@ class _LoginInputState extends State<LoginInput> {
         )
     );
   }
+  Future signIn() async{
+  await FirebaseAuth.instance.signInWithEmailAndPassword(
+    email: emailController.text.trim(), 
+    password: passwordController.text.trim(),
+    );
 }
+}
+
