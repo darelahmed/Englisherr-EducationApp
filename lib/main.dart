@@ -1,12 +1,19 @@
 import 'package:englisherr/HomePage.dart';
+
+import 'package:englisherr/LandingScreen.dart';
 import 'package:englisherr/splashscreen.dart';
 import 'package:englisherr/BottomNavigation.dart';
 import 'package:englisherr/HomePage.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
-  runApp(const MyApp());
+Future main()async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -21,7 +28,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: BottomNavigation(),
+      home: SplashScreen()
     );
   }
 }

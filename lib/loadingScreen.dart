@@ -10,11 +10,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 
-class SplashScreen extends StatefulWidget {
+class loading extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => SplashState();
 }
-class SplashState extends State<SplashScreen> {
+class SplashState extends State<loading> {
   @override
   void initState() {
     // TODO: implement initState
@@ -31,7 +31,7 @@ class SplashState extends State<SplashScreen> {
   }
   
   startTime() async {
-    var duration = new Duration(seconds: 6);
+    var duration = new Duration(seconds: 8);
     return new Timer(duration, route);
   }
 route() {
@@ -43,16 +43,7 @@ route() {
     return Scaffold(
       backgroundColor: Color(0xff4A6363),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Container(
-              child: Image.asset("assets/icon/englisherr-logo.png",height: 300,width: 300,),
-            ),
-            
-            
-         ],
-       ),
+        child: CircularProgressIndicator()
       ),
     );
   }
