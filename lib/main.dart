@@ -1,4 +1,4 @@
-import 'package:englisherr/home.dart';
+import 'package:englisherr/HomePage.dart';
 import 'package:englisherr/splashscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
