@@ -100,35 +100,11 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ],
               ),
-              Container(
-                padding: EdgeInsets.only(top: 2),
-                child: Container(
-                  height: 40,
-                  width: 3,
-                  color: Colors.white,
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.only(top: 2),
-                child: Container(
-                  height: 3,
-                  width: 178,
-                  color: Colors.white,
-                ),
-              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Column(
                     children: [
-                      Container(
-                        padding: EdgeInsets.only(bottom: 2),
-                        child: Container(
-                          height: 20,
-                          width: 3,
-                          color: Colors.white,
-                        ),
-                      ),
                       Container(
                         width: 110,
                         height: 110,
@@ -156,14 +132,6 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(width: 65,),
                   Column(
                     children: [
-                      Container(
-                        padding: EdgeInsets.only(bottom: 2),
-                        child: Container(
-                          height: 20,
-                          width: 3,
-                          color: Colors.white,
-                        ),
-                      ),
                       Container(
                         width: 110,
                         height: 110,
