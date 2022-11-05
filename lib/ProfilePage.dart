@@ -43,18 +43,6 @@ class _ProfilePageState extends State<ProfilePage> {
               // sabar bang insyaallah nanti di hubungin ke page settings
             },
           ),
-          // Container(
-          //   width: 30,
-          //   height: 30,
-          //   child: IconButton(
-          //     icon: SvgPicture.asset('assets/icon/settings-outline.svg',
-          //         width: 30,
-          //         height: 30,color: Colors.white),
-          //     onPressed: (){
-          //       // sabar bang insyaallah nanti di hubungin ke page settings
-          //     },
-          //   ),
-          // ),
         ],
 
       ),
