@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "567440821388",
+    "project_id": "englisherr-e135b",
+    "storage_bucket": "englisherr-e135b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:567440821388:android:9c0b24d7acfc49eb513fa9",
+        "android_client_info": {
+          "package_name": "com.example.englisherr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "567440821388-3q08o2d12rurea68gdq482i62rb58eac.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBSI-dOmbIIDR8eq-746AZXtyikpnbzBk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "567440821388-3q08o2d12rurea68gdq482i62rb58eac.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

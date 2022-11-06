@@ -20,22 +20,27 @@ version: 1.0.0+1
 environment:
   sdk: ">=2.17.6 <3.0.0"
 
-# Dependencies specify other packages that your package needs in order to work.
-# To automatically upgrade your package dependencies to the latest versions
-# consider running `flutter pub upgrade --major-versions`. Alternatively,
-# dependencies can be manually updated by changing the version numbers below to
-# the latest version available on pub.dev. To see which dependencies have newer
-# versions available, run `flutter pub outdated`.
+
 dependencies:
   flutter:
     sdk: flutter
   curved_navigation_bar: ^1.0.3
-  flutter_svg: ^0.23.0+1
-
+  flutter_svg: ^1.1.6
+  hexagon:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  get: ^4.6.5
+  flutter_launcher_icons: ^0.10.0
+  cloud_firestore: ^4.0.2
+  firebase_auth: ^4.0.2
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/englisherr-AppIcon.png"
+
 
 dev_dependencies:
   flutter_test:
@@ -53,6 +58,43 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  fonts:
+    - family: IBMPlexSerif
+      fonts:
+        - asset: fonts/IBMPlexSerif-Regular.ttf
+        - asset: fonts/IBMPlexSerif-Bold.ttf
+        - asset: fonts/IBMPlexSerif-BoldItalic.ttf
+        - asset: fonts/IBMPlexSerif-ExtraLight.ttf
+        - asset: fonts/IBMPlexSerif-ExtraLightItalic.ttf
+        - asset: fonts/IBMPlexSerif-Italic.ttf
+        - asset: fonts/IBMPlexSerif-Light.ttf
+        - asset: fonts/IBMPlexSerif-LightItalic.ttf
+        - asset: fonts/IBMPlexSerif-Medium.ttf
+        - asset: fonts/IBMPlexSerif-MediumItalic.ttf
+        - asset: fonts/IBMPlexSerif-SemiBold.ttf
+        - asset: fonts/IBMPlexSerif-SemiBoldItalic.ttf
+        - asset: fonts/IBMPlexSerif-Thin.ttf
+        - asset: fonts/IBMPlexSerif-ThinItalic.ttf
+    - family: Montserrat
+      fonts:
+        - asset: fonts/Montserrat-Black.ttf
+        - asset: fonts/Montserrat-BlackItalic.ttf
+        - asset: fonts/Montserrat-Bold.ttf
+        - asset: fonts/Montserrat-BoldItalic.ttf
+        - asset: fonts/Montserrat-ExtraBold.ttf
+        - asset: fonts/Montserrat-ExtraBoldItalic.ttf
+        - asset: fonts/Montserrat-ExtraLight.ttf
+        - asset: fonts/Montserrat-ExtraLightItalic.ttf
+        - asset: fonts/Montserrat-Italic.ttf
+        - asset: fonts/Montserrat-Light.ttf
+        - asset: fonts/Montserrat-LightItalic.ttf
+        - asset: fonts/Montserrat-Medium.ttf
+        - asset: fonts/Montserrat-MediumItalic.ttf
+        - asset: fonts/Montserrat-Regular.ttf
+        - asset: fonts/Montserrat-SemiBold.ttf
+        - asset: fonts/Montserrat-SemiBoldItalic.ttf
+        - asset: fonts/Montserrat-Thin.ttf
+        - asset: fonts/Montserrat-ThinItalic.ttf
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
@@ -61,9 +103,8 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - icon/award-outline.svg
-    - icon/home-outline.svg
-    - icon/person-outline.svg
+    - assets/icon/
+    - assets/image/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
