@@ -38,7 +38,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
       ),
       bottomNavigationBar: CurvedNavigationBar(
         color: Color(0xff3B4A4A),
-        backgroundColor: Color.fromARGB(1000, 74, 99, 99),
+        backgroundColor: Colors.white,
         items: <Widget>[
           SvgPicture.asset('assets/icon/home-outline.svg',
           width: 30,
