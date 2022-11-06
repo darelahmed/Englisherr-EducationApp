@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:englisherr/HomePage.dart';
+import 'package:englisherr/UI/HomePage.dart';
 import 'package:englisherr/LandingScreen.dart';
 import 'package:englisherr/loginTaker.dart';
 import 'package:flutter/material.dart';

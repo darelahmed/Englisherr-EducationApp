@@ -1,6 +1,6 @@
 // ignore_for_file: deprecated_member_use
 
-import 'package:englisherr/AchievementPage.dart';
+import 'package:englisherr/UI/AchievementPage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
