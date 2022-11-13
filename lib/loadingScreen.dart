@@ -14,12 +14,25 @@ class loading extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => SplashState();
 }
-class SplashState extends State<loading> {
+class SplashState extends State<loading> with TickerProviderStateMixin{
+  late AnimationController controller;
+  late Animation<double> animation;
+
+
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
+    controller = AnimationController(vsync: this,duration: Duration(seconds: 8));
+
+    animation = CurvedAnimation(parent: controller, curve: Curves.easeIn);
+    controller.repeat();
     startTime();
+  }
+
+  void dispose(){
+    controller.dispose();
+    super.dispose();
   }
   
   @override
@@ -43,7 +56,11 @@ route() {
     return Scaffold(
       backgroundColor: Color(0xff4A6363),
       body: Center(
-        child: CircularProgressIndicator()
+        child: RotationTransition(
+          turns: animation ,
+          child:  Image.asset("assets/icon/englisherr-logo.png",height: 300,width: 300,),
+
+        )
       ),
     );
   }

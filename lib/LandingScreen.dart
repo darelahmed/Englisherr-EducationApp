@@ -1,4 +1,5 @@
 import 'package:englisherr/loginInput.dart';
+import 'package:englisherr/signupInput.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -118,7 +119,7 @@ class _loginPageState extends State<loginPage> {
                       ),
                       child: new InkWell(
                       onTap: () {
-                        print("tapped");
+                        Get.to(() => SignupInput(),transition: Transition.rightToLeft, duration: Duration(seconds: 1));
                       }
                     ),
                     ),

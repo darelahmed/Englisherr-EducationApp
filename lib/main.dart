@@ -1,7 +1,11 @@
 import 'package:englisherr/UI/HomePage.dart';
 
 import 'package:englisherr/LandingScreen.dart';
+import 'package:englisherr/signupInput.dart';
 import 'package:englisherr/splashscreen.dart';
+import 'package:englisherr/BottomNavigation.dart';
+import 'package:englisherr/HomePage.dart';
+import 'package:englisherr/utils.dart';
 import 'package:englisherr/UI/BottomNavigation.dart';
 import 'package:englisherr/UI/HomePage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -23,6 +27,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      scaffoldMessengerKey: Utils.messengerKey,
       debugShowCheckedModeBanner: false,
       title: 'Englisherr',
       theme: ThemeData(
