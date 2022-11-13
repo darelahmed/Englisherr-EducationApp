@@ -33,6 +33,7 @@ dependencies:
   flutter_launcher_icons: ^0.10.0
   cloud_firestore: ^4.0.2
   firebase_auth: ^4.0.2
+  email_validator: ^2.1.17
 
 flutter_icons:
   android: true
