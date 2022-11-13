@@ -414,7 +414,7 @@ class _ProfilePageState extends State<ProfilePage> {
                             Container(
                               width: 350,
                               height: 50,
-                              child: FlatButton(
+                              child: TextButton(
                                 onPressed: () {
                                   Navigator.push(
                                     context,
