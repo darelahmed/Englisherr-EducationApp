@@ -1,4 +1,4 @@
-import 'package:englisherr/HomePage.dart';
+import 'package:englisherr/UI/HomePage.dart';
 
 import 'package:englisherr/LandingScreen.dart';
 import 'package:englisherr/signupInput.dart';
@@ -6,6 +6,8 @@ import 'package:englisherr/splashscreen.dart';
 import 'package:englisherr/BottomNavigation.dart';
 import 'package:englisherr/HomePage.dart';
 import 'package:englisherr/utils.dart';
+import 'package:englisherr/UI/BottomNavigation.dart';
+import 'package:englisherr/UI/HomePage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
