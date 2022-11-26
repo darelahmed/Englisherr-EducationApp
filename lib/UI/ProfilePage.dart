@@ -1,5 +1,6 @@
 // ignore_for_file: deprecated_member_use
 
+import 'package:englisherr/UI/AchievementPage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -43,18 +44,6 @@ class _ProfilePageState extends State<ProfilePage> {
               // sabar bang insyaallah nanti di hubungin ke page settings
             },
           ),
-          // Container(
-          //   width: 30,
-          //   height: 30,
-          //   child: IconButton(
-          //     icon: SvgPicture.asset('assets/icon/settings-outline.svg',
-          //         width: 30,
-          //         height: 30,color: Colors.white),
-          //     onPressed: (){
-          //       // sabar bang insyaallah nanti di hubungin ke page settings
-          //     },
-          //   ),
-          // ),
         ],
 
       ),
@@ -425,8 +414,12 @@ class _ProfilePageState extends State<ProfilePage> {
                             Container(
                               width: 350,
                               height: 50,
-                              child: FlatButton(
+                              child: TextButton(
                                 onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => const AchievementPage()),
+                                  );
                                 },
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.start,
