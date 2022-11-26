@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Color(0xff3B4A4A),
         actions: <Widget>[
           Container(
-            padding: EdgeInsets.only(right: 210),
+            padding: EdgeInsets.only(right: 240),
             child: Row(
               children: [
                 IconButton(
