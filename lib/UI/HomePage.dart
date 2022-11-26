@@ -1,3 +1,4 @@
+import 'package:englisherr/UI/DetailLevel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -14,12 +15,12 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(1000, 74, 99, 99),
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Color(0xff3B4A4A),
         actions: <Widget>[
           Container(
-            padding: EdgeInsets.only(right: 210),
+            padding: EdgeInsets.only(right: 240),
             child: Row(
               children: [
                 IconButton(
@@ -81,18 +82,22 @@ class _HomePageState extends State<HomePage> {
                     height: 120,
                     child: InkWell(
                       onTap: (){
-
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => DetailLevel())
+                        );
                       },
                       child: new RotationTransition(
                           turns: new AlwaysStoppedAnimation(90 / 360),
                         child: HexagonWidget.flat(
                           width: 115,
                           height: 115,
-                          color: Colors.white,
+                          color: Color(0xff3B4A4A),
+                          cornerRadius: 5,
                           padding: 4.0,
                           child: new RotationTransition(
                             turns: new AlwaysStoppedAnimation(-90 / 360),
-                            child:  Text('Introduction',style: TextStyle(color: Colors.black,fontSize: 12,fontWeight: FontWeight.bold, fontFamily: "IBMPlexSerif"),),
+                            child:  Text('Introduction',style: TextStyle(color: Colors.white,fontSize: 12,fontWeight: FontWeight.bold, fontFamily: "Montserrat"),),
                           ),
                         ),
                       )
@@ -100,35 +105,11 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ],
               ),
-              Container(
-                padding: EdgeInsets.only(top: 2),
-                child: Container(
-                  height: 40,
-                  width: 3,
-                  color: Colors.white,
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.only(top: 2),
-                child: Container(
-                  height: 3,
-                  width: 178,
-                  color: Colors.white,
-                ),
-              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Column(
                     children: [
-                      Container(
-                        padding: EdgeInsets.only(bottom: 2),
-                        child: Container(
-                          height: 20,
-                          width: 3,
-                          color: Colors.white,
-                        ),
-                      ),
                       Container(
                         width: 110,
                         height: 110,
@@ -141,11 +122,12 @@ class _HomePageState extends State<HomePage> {
                               child: HexagonWidget.flat(
                                 width: 115,
                                 height: 115,
-                                color: Colors.white,
+                                color: Color(0xff3B4A4A),
+                                cornerRadius: 5,
                                 padding: 4.0,
                                 child: new RotationTransition(
                                   turns: new AlwaysStoppedAnimation(-90 / 360),
-                                  child:  Text('Writing',style: TextStyle(color: Colors.black,fontSize: 12,fontWeight: FontWeight.bold, fontFamily: "IBMPlexSerif"),),
+                                  child:  Text('Writing',style: TextStyle(color: Colors.white,fontSize: 12,fontWeight: FontWeight.bold, fontFamily: "Montserrat"),),
                                 ),
                               ),
                             )
@@ -157,14 +139,6 @@ class _HomePageState extends State<HomePage> {
                   Column(
                     children: [
                       Container(
-                        padding: EdgeInsets.only(bottom: 2),
-                        child: Container(
-                          height: 20,
-                          width: 3,
-                          color: Colors.white,
-                        ),
-                      ),
-                      Container(
                         width: 110,
                         height: 110,
                         child: InkWell(
@@ -176,11 +150,12 @@ class _HomePageState extends State<HomePage> {
                               child: HexagonWidget.flat(
                                 width: 115,
                                 height: 115,
-                                color: Colors.white,
+                                color: Color(0xff3B4A4A),
+                                cornerRadius: 5,
                                 padding: 4.0,
                                 child: new RotationTransition(
                                   turns: new AlwaysStoppedAnimation(-90 / 360),
-                                  child:  Text('Speaking',style: TextStyle(color: Colors.black,fontSize: 12,fontWeight: FontWeight.bold, fontFamily: "IBMPlexSerif"),),
+                                  child:  Text('Speaking',style: TextStyle(color: Colors.white,fontSize: 12,fontWeight: FontWeight.bold, fontFamily: "Montserrat"),),
                                 ),
                               ),
                             )
@@ -208,11 +183,12 @@ class _HomePageState extends State<HomePage> {
 
                                 width: 115,
                                 height: 115,
-                                color: Colors.white,
+                                color: Color(0xff3B4A4A),
+                                cornerRadius: 5,
                                 padding: 4.0,
                                 child: new RotationTransition(
                                   turns: new AlwaysStoppedAnimation(-90 / 360),
-                                  child:  Text('Level 1',style: TextStyle(color: Colors.black,fontSize: 12,fontWeight: FontWeight.bold, fontFamily: "IBMPlexSerif"),),
+                                  child:  Text('Level 1',style: TextStyle(color: Colors.white,fontSize: 12,fontWeight: FontWeight.bold, fontFamily: "Montserrat"),),
                                 ),
                               ),
                             )
@@ -239,11 +215,12 @@ class _HomePageState extends State<HomePage> {
                             child: HexagonWidget.flat(
                               width: 115,
                               height: 115,
-                              color: Colors.white,
+                              color: Color(0xff3B4A4A),
+                              cornerRadius: 5,
                               padding: 4.0,
                               child: new RotationTransition(
                                 turns: new AlwaysStoppedAnimation(-90 / 360),
-                                child:  Text('Vocabulary',style: TextStyle(color: Colors.black,fontSize: 12,fontWeight: FontWeight.bold, fontFamily: "IBMPlexSerif"),),
+                                child:  Text('Vocabulary',style: TextStyle(color: Colors.white,fontSize: 12,fontWeight: FontWeight.bold, fontFamily: "Montserrat"),),
                               ),
                             ),
                           )
@@ -266,11 +243,12 @@ class _HomePageState extends State<HomePage> {
                               child: HexagonWidget.flat(
                                 width: 115,
                                 height: 115,
-                                color: Colors.white,
+                                color: Color(0xff3B4A4A),
+                                cornerRadius: 5,
                                 padding: 4.0,
                                 child: new RotationTransition(
                                   turns: new AlwaysStoppedAnimation(-90 / 360),
-                                  child:  Text(' Speaking\nExcercises',style: TextStyle(color: Colors.black,fontSize: 12,fontWeight: FontWeight.bold, fontFamily: "IBMPlexSerif"),),
+                                  child:  Text(' Speaking\nExcercises',style: TextStyle(color: Colors.white,fontSize: 12,fontWeight: FontWeight.bold, fontFamily: "Montserrat"),),
                                 ),
                               ),
                             )
@@ -297,11 +275,12 @@ class _HomePageState extends State<HomePage> {
                               child: HexagonWidget.flat(
                                 width: 115,
                                 height: 115,
-                                color: Colors.white,
+                                color: Color(0xff3B4A4A),
+                                cornerRadius: 5,
                                 padding: 4.0,
                                 child: new RotationTransition(
                                   turns: new AlwaysStoppedAnimation(-90 / 360),
-                                  child:  Text('Level 2',style: TextStyle(color: Colors.black,fontSize: 12,fontWeight: FontWeight.bold, fontFamily: "IBMPlexSerif"),),
+                                  child:  Text('Level 2',style: TextStyle(color: Colors.white,fontSize: 12,fontWeight: FontWeight.bold, fontFamily: "Montserrat"),),
                                 ),
                               ),
                             )
@@ -328,11 +307,12 @@ class _HomePageState extends State<HomePage> {
                               child: HexagonWidget.flat(
                                 width: 115,
                                 height: 115,
-                                color: Colors.white,
+                                color: Color(0xff3B4A4A),
+                                cornerRadius: 5,
                                 padding: 4.0,
                                 child: new RotationTransition(
                                   turns: new AlwaysStoppedAnimation(-90 / 360),
-                                  child:  Text('Foods',style: TextStyle(color: Colors.black,fontSize: 12,fontWeight: FontWeight.bold, fontFamily: "IBMPlexSerif"),),
+                                  child:  Text('Foods',style: TextStyle(color: Colors.white,fontSize: 12,fontWeight: FontWeight.bold, fontFamily: "Montserrat"),),
                                 ),
                               ),
                             )
@@ -355,11 +335,12 @@ class _HomePageState extends State<HomePage> {
                               child: HexagonWidget.flat(
                                 width: 115,
                                 height: 115,
-                                color: Colors.white,
+                                color: Color(0xff3B4A4A),
+                                cornerRadius: 5,
                                 padding: 4.0,
                                 child: new RotationTransition(
                                   turns: new AlwaysStoppedAnimation(-90 / 360),
-                                  child:  Text('Animals',style: TextStyle(color: Colors.black,fontSize: 12,fontWeight: FontWeight.bold, fontFamily: "IBMPlexSerif"),),
+                                  child:  Text('Animals',style: TextStyle(color: Colors.white,fontSize: 12,fontWeight: FontWeight.bold, fontFamily: "Montserrat"),),
                                 ),
                               ),
                             )
@@ -386,11 +367,12 @@ class _HomePageState extends State<HomePage> {
                               child: HexagonWidget.flat(
                                 width: 115,
                                 height: 115,
-                                color: Colors.white,
+                                color: Color(0xff3B4A4A),
+                                cornerRadius: 5,
                                 padding: 4.0,
                                 child: new RotationTransition(
                                   turns: new AlwaysStoppedAnimation(-90 / 360),
-                                  child:  Text('Level 3',style: TextStyle(color: Colors.black,fontSize: 12,fontWeight: FontWeight.bold, fontFamily: "IBMPlexSerif"),),
+                                  child:  Text('Level 3',style: TextStyle(color: Colors.white,fontSize: 12,fontWeight: FontWeight.bold, fontFamily: "Montserrat"),),
                                 ),
                               ),
                             )
@@ -417,11 +399,12 @@ class _HomePageState extends State<HomePage> {
                               child: HexagonWidget.flat(
                                 width: 115,
                                 height: 115,
-                                color: Colors.white,
+                                color: Color(0xff3B4A4A),
+                                cornerRadius: 5,
                                 padding: 4.0,
                                 child: new RotationTransition(
                                   turns: new AlwaysStoppedAnimation(-90 / 360),
-                                  child:  Text('Plural Word',style: TextStyle(color: Colors.black,fontSize: 12,fontWeight: FontWeight.bold, fontFamily: "IBMPlexSerif"),),
+                                  child:  Text('Plural Word',style: TextStyle(color: Colors.white,fontSize: 12,fontWeight: FontWeight.bold, fontFamily: "Montserrat"),),
                                 ),
                               ),
                             )
@@ -444,11 +427,12 @@ class _HomePageState extends State<HomePage> {
                               child: HexagonWidget.flat(
                                 width: 115,
                                 height: 115,
-                                color: Colors.white,
+                                color: Color(0xff3B4A4A),
+                                cornerRadius: 5,
                                 padding: 4.0,
                                 child: new RotationTransition(
                                   turns: new AlwaysStoppedAnimation(-90 / 360),
-                                  child:  Text('   Declare\nOwnership',style: TextStyle(color: Colors.black,fontSize: 12,fontWeight: FontWeight.bold, fontFamily: "IBMPlexSerif"),),
+                                  child:  Text('   Declare\nOwnership',style: TextStyle(color: Colors.white,fontSize: 12,fontWeight: FontWeight.bold, fontFamily: "Montserrat"),),
                                 ),
                               ),
                             )
