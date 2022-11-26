@@ -1,6 +1,6 @@
-import 'package:englisherr/HomePage.dart';
-import 'package:englisherr/ChallengePage.dart';
-import 'package:englisherr/ProfilePage.dart';
+import 'package:englisherr/UI/HomePage.dart';
+import 'package:englisherr/UI/ChallengePage.dart';
+import 'package:englisherr/UI/ProfilePage.dart';
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -38,7 +38,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
       ),
       bottomNavigationBar: CurvedNavigationBar(
         color: Color(0xff3B4A4A),
-        backgroundColor: Color.fromARGB(1000, 74, 99, 99),
+        backgroundColor: Colors.white,
         items: <Widget>[
           SvgPicture.asset('assets/icon/home-outline.svg',
           width: 30,

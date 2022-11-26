@@ -1,6 +1,6 @@
 // ignore_for_file: deprecated_member_use
 
-import 'package:englisherr/AchievementPage.dart';
+import 'package:englisherr/UI/AchievementPage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -25,7 +25,7 @@ class _ProfilePageState extends State<ProfilePage> {
           children: [
             Container(
               height: 50,
-              width: 250,
+              width: 280,
               child: Center(
                 child: Text(
                   "Profile",
@@ -58,7 +58,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 children: [
                   Container(
                     padding: EdgeInsets.only(left: 15),
-                    width: 275,
+                    width: 300,
                     height: 88,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -248,7 +248,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                           height: 15,
                                           decoration: BoxDecoration(
                                             borderRadius: BorderRadius.circular(10),
-                                            color: Color(0xff435656).withOpacity(.5),
+                                            color: Color(0xffE4E4E4).withOpacity(.5),
                                           ),
                                           child: Row(
                                             children: [
@@ -257,7 +257,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                                 height: 15,
                                                 decoration: BoxDecoration(
                                                   borderRadius: BorderRadius.circular(10),
-                                                  color: Color(0xff435656),
+                                                  color: Color(0xffE4E4E4),
                                                 ),
                                               ),
                                             ],
@@ -313,7 +313,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                           height: 15,
                                           decoration: BoxDecoration(
                                             borderRadius: BorderRadius.circular(10),
-                                            color: Color(0xff435656).withOpacity(.5),
+                                            color: Color(0xffE4E4E4).withOpacity(.5),
                                           ),
                                           child: Row(
                                             children: [
@@ -378,7 +378,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                           height: 15,
                                           decoration: BoxDecoration(
                                             borderRadius: BorderRadius.circular(10),
-                                            color: Color(0xff435656).withOpacity(.5),
+                                            color: Color(0xffE4E4E4).withOpacity(.5),
                                           ),
                                           child: Row(
                                             children: [
@@ -387,7 +387,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                                 height: 15,
                                                 decoration: BoxDecoration(
                                                   borderRadius: BorderRadius.circular(10),
-                                                  color: Color(0xff435656),
+                                                  color: Color(0xffE4E4E4),
                                                 ),
                                               ),
                                             ],
@@ -414,7 +414,7 @@ class _ProfilePageState extends State<ProfilePage> {
                             Container(
                               width: 350,
                               height: 50,
-                              child: FlatButton(
+                              child: TextButton(
                                 onPressed: () {
                                   Navigator.push(
                                     context,

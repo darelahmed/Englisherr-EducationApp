@@ -1,3 +1,4 @@
+import 'package:englisherr/UI/DetailLevel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -19,7 +20,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Color(0xff3B4A4A),
         actions: <Widget>[
           Container(
-            padding: EdgeInsets.only(right: 210),
+            padding: EdgeInsets.only(right: 240),
             child: Row(
               children: [
                 IconButton(
@@ -81,7 +82,10 @@ class _HomePageState extends State<HomePage> {
                     height: 120,
                     child: InkWell(
                       onTap: (){
-
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => DetailLevel())
+                        );
                       },
                       child: new RotationTransition(
                           turns: new AlwaysStoppedAnimation(90 / 360),
