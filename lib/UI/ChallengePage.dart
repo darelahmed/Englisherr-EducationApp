@@ -136,7 +136,7 @@ class _ChallengePageState extends State<ChallengePage> {
                                               height: 15,
                                               decoration: BoxDecoration(
                                                 borderRadius: BorderRadius.circular(10),
-                                                color: Color(0xff435656).withOpacity(.5),
+                                                color: Color(0xffE4E4E4).withOpacity(.5),
                                               ),
                                               child: Row(
                                                 children: [
@@ -211,7 +211,7 @@ class _ChallengePageState extends State<ChallengePage> {
                                               height: 15,
                                               decoration: BoxDecoration(
                                                 borderRadius: BorderRadius.circular(10),
-                                                color: Color(0xff435656).withOpacity(.5),
+                                                color: Color(0xffE4E4E4).withOpacity(.5),
                                               ),
                                               child: Row(
                                                 children: [
@@ -220,7 +220,7 @@ class _ChallengePageState extends State<ChallengePage> {
                                                     height: 15,
                                                     decoration: BoxDecoration(
                                                       borderRadius: BorderRadius.circular(10),
-                                                      color: Color(0xff435656),
+                                                      color: Color(0xffE4E4E4),
                                                     ),
                                                   ),
                                                 ],
