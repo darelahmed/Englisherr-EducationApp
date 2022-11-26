@@ -58,7 +58,7 @@ class _ChallengePageState extends State<ChallengePage> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: const EdgeInsets.only(left: 10, top: 19),
+                            padding: const EdgeInsets.only(left: 19, top: 19),
                             child: Text(
                               'Daily Missions',
                               style: TextStyle(
@@ -69,16 +69,18 @@ class _ChallengePageState extends State<ChallengePage> {
                               ),
                             ),
                           ),
-                          //svg picture clock
+                          SizedBox(
+                            width: 100,
+                          ),
                           Padding(
-                            padding: const EdgeInsets.only(left: 86, top: 19, right: 5),
+                            padding: const EdgeInsets.only(top: 19, right: 5),
                             child: SvgPicture.asset('assets/icon/clock.svg',
                                 width: 30,
                                 height: 30,
                                 color: Color(0xff3B4A4A)),
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(right: 19, top: 19),
+                            padding: const EdgeInsets.only(top: 19),
                             child: Text(
                               '23 hours',
                               style: TextStyle(
