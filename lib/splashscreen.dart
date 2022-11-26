@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:englisherr/HomePage.dart';
+import 'package:englisherr/UI/HomePage.dart';
 import 'package:englisherr/LandingScreen.dart';
 import 'package:englisherr/loginTaker.dart';
 import 'package:flutter/material.dart';
@@ -41,13 +41,13 @@ route() {
   
   initScreen(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff4A6363),
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
-              child: Image.asset("assets/icon/englisherr-logo.png",height: 300,width: 300,),
+              child: Image.asset("assets/icon/englisherr-logoW.png",height: 300,width: 300,),
             ),
             
             

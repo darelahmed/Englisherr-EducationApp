@@ -1,8 +1,7 @@
-import 'package:email_validator/email_validator.dart';
 import 'package:englisherr/loadingScreen.dart';
 import 'package:englisherr/LandingScreen.dart';
+import 'package:englisherr/loginInput.dart';
 import 'package:englisherr/loginTaker.dart';
-import 'package:englisherr/signupInput.dart';
 import 'package:englisherr/splashscreen.dart';
 import 'package:englisherr/utils.dart';
 import 'package:flutter/gestures.dart';
@@ -11,18 +10,21 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:email_validator/email_validator.dart';
 
-class LoginInput extends StatefulWidget {
-  const LoginInput({super.key});
+class SignupInput extends StatefulWidget {
+  const SignupInput({super.key});
 
   @override
-  State<LoginInput> createState() => _LoginInputState();
+  State<SignupInput> createState() => _SignupInputState();
 }
 
-class _LoginInputState extends State<LoginInput> {
+class _SignupInputState extends State<SignupInput> {
   final formkey = GlobalKey<FormState>();
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
+   final ConfirmPSController = TextEditingController();
+   
   
 
   @override
@@ -43,16 +45,16 @@ class _LoginInputState extends State<LoginInput> {
       body:SingleChildScrollView(
         child: Center(
           child: Form(
-             key: formkey,
+            key: formkey,
           child: Column(
             children: [
               
-              SizedBox(height:100),
+              SizedBox(height:70),
 
                Container(
-               child: Text("LOGIN",style: TextStyle(color: Color(0xff4A6363),fontFamily: 'IBMPlexSerif', fontWeight: FontWeight.bold, fontSize: 25.0)),
+               child: Text("Sign Up",style: TextStyle(color: Color(0xff4A6363),fontFamily: 'IBMPlexSerif', fontWeight: FontWeight.bold, fontSize: 25.0)),
               ),
-              SizedBox(height: 50,),
+              SizedBox(height: 40,),
 
               //textField
 
@@ -75,6 +77,7 @@ class _LoginInputState extends State<LoginInput> {
                         email != null && !EmailValidator.validate(email)
                         ? 'Enter a valid email'
                         : null,
+                        
                 ),
               ),
               SizedBox(height: 40,),
@@ -95,7 +98,7 @@ class _LoginInputState extends State<LoginInput> {
                     hintStyle: TextStyle(color: Colors.grey[800]),
                     hintText: "Password",
                     fillColor: Colors.white),
-                     autovalidateMode: AutovalidateMode.onUserInteraction,
+                    autovalidateMode: AutovalidateMode.onUserInteraction,
                     validator: (value) => value != null && value.length < 6
                     ? 'Enter min. 6 Characters'
                     : null,
@@ -104,6 +107,30 @@ class _LoginInputState extends State<LoginInput> {
 
               SizedBox(height: 40,),
 
+               Container(
+                width: 330,
+                child: TextFormField(
+                  controller: ConfirmPSController ,
+                  obscureText: true ,
+                  decoration: InputDecoration(
+                    
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                    filled: true,
+                    hintStyle: TextStyle(color: Colors.grey[800]),
+                    hintText: "Confirm Password",
+                    fillColor: Colors.white),
+                    autovalidateMode: AutovalidateMode.onUserInteraction,
+                    validator: (value) => value != null && value != passwordController.text
+                    ? 'Incorrect password'
+                    : null,
+                ),
+              ),
+
+              SizedBox(height: 40,),
+
+             
               //button
 
               Container(
@@ -121,7 +148,8 @@ class _LoginInputState extends State<LoginInput> {
                       ),
                       child: new InkWell(
                       onTap: () => {
-                        signIn(),
+                        signUp(),
+                        
                       }
                        
                       
@@ -129,7 +157,7 @@ class _LoginInputState extends State<LoginInput> {
                     ),
                     Container(
                       alignment: Alignment.center,
-                      child: Text("LOGIN",style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 22.0))
+                      child: Text("Sign Up",style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 22.0))
                     ),
                     
                   ],
@@ -143,34 +171,34 @@ class _LoginInputState extends State<LoginInput> {
               Container(
                 child: Row(
                   children: [
-                    SizedBox(width: 10,),
+                    SizedBox(width: 20,),
                     Padding(
                       padding:EdgeInsets.symmetric(horizontal:10.0),
                       child:Container(
                       height:1.0,
-                      width:120.0,
+                      width:100.0,
                       color:Color(0xff4A6363),),),
-                      Text("or login with",style: TextStyle(color: Color(0xff4A6363), fontWeight: FontWeight.normal, fontSize: 18.0)),
+                      Text("or sign up with",style: TextStyle(color: Color(0xff4A6363), fontWeight: FontWeight.normal, fontSize: 18.0)),
                       Padding(
                       padding:EdgeInsets.symmetric(horizontal:10.0),
                       child:Container(
                       height:1.0,
-                      width:120.0,
+                      width:100.0,
                       color:Color(0xff4A6363),),),
                   ],
                 ),
               ),
-               Container(
-                child: SizedBox(height: 210),
+              Container(
+                child: SizedBox(height: 150),
               ),
               RichText(
                 text:TextSpan(
+                  text: 'Already have account?',
                   style: TextStyle(color: Color(0xff4A6363), fontWeight: FontWeight.normal, fontFamily: "IBMPlexSerif",fontSize: 20),
-                  text: 'Dont have account?',
                   children:[ TextSpan(
                     recognizer: TapGestureRecognizer()
-                      ..onTap = () => Get.off(()=> SignupInput(), transition: Transition.leftToRight,duration: Duration(seconds: 1)) ,
-                    text: 'Sign Up',
+                      ..onTap = () => Get.off(()=> LoginInput(),transition: Transition.rightToLeft,duration: Duration(seconds: 1)) ,
+                    text: 'Login',
                     style: TextStyle(decoration: TextDecoration.underline, color: Color.fromARGB(255, 105, 198, 167), fontSize: 20, fontFamily: "IBMPlexSerif", fontWeight: FontWeight.bold,)
                   )
                   ]
@@ -180,29 +208,36 @@ class _LoginInputState extends State<LoginInput> {
 
             ],
           ),
-          ),
+          )
          
         ) ,
+        
         )
     );
   }
-  Future signIn() async{
+  Future signUp() async{
     final isValid = formkey.currentState!.validate();
     if(!isValid) return;
 
-    try{
-  await FirebaseAuth.instance.signInWithEmailAndPassword(
+    
+
+  try{
+    await FirebaseAuth.instance.createUserWithEmailAndPassword(
     email: emailController.text.trim(), 
     password: passwordController.text.trim(),
     );
     Get.to(()=> loading(),transition: Transition.fade,duration: Duration(milliseconds: 500));
-    }on FirebaseAuthException catch(e){
-       print(e);
+  }on FirebaseAuthException catch(e){
+    print(e);
 
-      Utils.showSnackBar(e.message);
-    }
+    Utils.showSnackBar(e.message);
+  }
 
-
+  
+  
 }
 }
+
+
+
 
