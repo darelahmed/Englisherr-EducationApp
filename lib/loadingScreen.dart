@@ -48,17 +48,17 @@ class SplashState extends State<loading> with TickerProviderStateMixin{
     return new Timer(duration, route);
   }
 route() {
-    Get.off(()=> loginT(),transition: Transition.circularReveal,duration:Duration(seconds: 1) );
+    Get.offAll(()=> loginT(),transition: Transition.circularReveal,duration:Duration(seconds: 1) );
     
   }
   
   initScreen(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff4A6363),
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
       body: Center(
         child: RotationTransition(
           turns: animation ,
-          child:  Image.asset("assets/icon/englisherr-logo.png",height: 300,width: 300,),
+          child:  Image.asset("assets/icon/englisherr-logoW.png",height: 300,width: 300,),
 
         )
       ),

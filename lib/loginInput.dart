@@ -28,11 +28,11 @@ class _LoginInputState extends State<LoginInput> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff4A6363),
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
       appBar: AppBar(
                     title: Text(''),// You can add title here
                     leading: new IconButton(
-                      icon: new Icon(Icons.arrow_back_ios, color: Colors.white),
+                      icon: new Icon(Icons.arrow_back_ios, color: Color(0xff4A6363)),
                       onPressed: () {
                         Get.back();
                       },
@@ -50,7 +50,7 @@ class _LoginInputState extends State<LoginInput> {
               SizedBox(height:100),
 
                Container(
-               child: Text("LOGIN",style: TextStyle(color: Colors.white,fontFamily: 'IBMPlexSerif', fontWeight: FontWeight.bold, fontSize: 25.0)),
+               child: Text("LOGIN",style: TextStyle(color: Color(0xff4A6363),fontFamily: 'IBMPlexSerif', fontWeight: FontWeight.bold, fontSize: 25.0)),
               ),
               SizedBox(height: 50,),
 
@@ -114,7 +114,7 @@ class _LoginInputState extends State<LoginInput> {
                   children: [
                     Card(
                       elevation: 20,
-                      color: Color(0xff79BFBF),
+                      color: Color(0xff4A6363),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(40),
                         side: BorderSide(width: 6, color: Color(0xff53887F))
@@ -149,14 +149,14 @@ class _LoginInputState extends State<LoginInput> {
                       child:Container(
                       height:1.0,
                       width:120.0,
-                      color:Colors.white,),),
-                      Text("or login with",style: TextStyle(color: Colors.white, fontWeight: FontWeight.normal, fontSize: 18.0)),
+                      color:Color(0xff4A6363),),),
+                      Text("or login with",style: TextStyle(color: Color(0xff4A6363), fontWeight: FontWeight.normal, fontSize: 18.0)),
                       Padding(
                       padding:EdgeInsets.symmetric(horizontal:10.0),
                       child:Container(
                       height:1.0,
                       width:120.0,
-                      color:Colors.white,),),
+                      color:Color(0xff4A6363),),),
                   ],
                 ),
               ),
@@ -165,7 +165,7 @@ class _LoginInputState extends State<LoginInput> {
               ),
               RichText(
                 text:TextSpan(
-                  style: TextStyle(color: Colors.white, fontWeight: FontWeight.normal, fontFamily: "IBMPlexSerif",fontSize: 20),
+                  style: TextStyle(color: Color(0xff4A6363), fontWeight: FontWeight.normal, fontFamily: "IBMPlexSerif",fontSize: 20),
                   text: 'Dont have account?',
                   children:[ TextSpan(
                     recognizer: TapGestureRecognizer()
